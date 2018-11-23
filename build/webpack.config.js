@@ -12,7 +12,7 @@ module.exports = {
       },
       {
         test: /\.(sa|sc|c)ss$/,
-        use: [isDev? "style-loader" : MiniCssExtractPlugin.loader,'css-loader',  'postcss-loader']
+        use: [isDev? "style-loader" : MiniCssExtractPlugin.loader,'css-loader',  'postcss-loader', 'sass-loader']
 //      use: isDev?['css-loader', "style-loader", 'postcss-loader'] :ExtractTextPlugin.extract({
 //        fallback: "style-loader",
 //          use: ['css-loader', 'postcss-loader']
@@ -53,6 +53,7 @@ module.exports = {
       'examples': path.resolve(__dirname, '../src/examples'),
       'css': path.resolve(__dirname, '../src/css'),
       'assets': path.resolve(__dirname, '../src/assets'),
+      'lib': path.resolve(__dirname, '../src/lib'),
     },
     extensions: ['*', '.js', '.vue', '.json']
   },
